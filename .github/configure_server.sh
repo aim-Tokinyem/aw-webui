@@ -9,12 +9,12 @@ cat > $HOME/.config/activitywatch/aw-server/aw-server.toml <<- EOM
 [server]
 #host = "localhost"
 #port = "5600"
-#storage = "peewee"
-cors_origins = "http://localhost:27180"
+#storage = "postgrey"
+cors_origins = "https://localhost:27180"
 
 [server-testing]
 #host = "localhost"
 #port = "5666"
-#storage = "peewee"
-cors_origins = "http://localhost:27180"
+#storage = "postgrey"
+cors_origins = "https://localhost:27180"
 EOM

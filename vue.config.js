@@ -54,6 +54,22 @@ module.exports = {
       directory: path.join(__dirname, 'dist'),
     },
   },
+  devServer: {
+    compress: true,
+    port: 27180,
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
+    https: true,
+    proxy: {
+      '^/api/.*': {
+        target: 'https://localhost:5600', // Backend server URL
+        changeOrigin: true,
+        ws: true,
+        secure: false,
+      },
+    },
+  },
   pwa: {
     name: 'ActivityWatch',
     iconPaths: {
